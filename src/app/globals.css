@@ -2,7 +2,53 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #1c1917;
+}
+
+@theme {
+  --color-amber-50: #f7f4f1;
+  --color-amber-100: #f0ebe5;
+  --color-amber-200: #e3dad1;
+  --color-amber-300: #d1c4b7;
+  --color-amber-400: #c4b1a0;
+  --color-amber-500: #bca996;
+  --color-amber-600: #7f6d5c;
+  --color-amber-700: #5f5145;
+  --color-amber-800: #4a3f36;
+  --color-amber-900: #3a322b;
+
+  --color-emerald-50: #f6f3ef;
+  --color-emerald-100: #eee8e1;
+  --color-emerald-200: #ded4c8;
+  --color-emerald-300: #cdbfb0;
+  --color-emerald-400: #c0ac98;
+  --color-emerald-500: #b3a08c;
+  --color-emerald-600: #756554;
+  --color-emerald-700: #5a4d41;
+  --color-emerald-800: #463b32;
+  --color-emerald-900: #372f28;
+
+  --color-blue-50: #f5f4f2;
+  --color-blue-100: #ecebe7;
+  --color-blue-200: #dad8d2;
+  --color-blue-300: #c6c3bb;
+  --color-blue-400: #b8b3a9;
+  --color-blue-500: #a9a294;
+  --color-blue-600: #6e675b;
+  --color-blue-700: #554f46;
+  --color-blue-800: #423e37;
+  --color-blue-900: #34312b;
+
+  --color-red-50: #f7f1ee;
+  --color-red-100: #f0e3dd;
+  --color-red-200: #e0cbc1;
+  --color-red-300: #cfae9f;
+  --color-red-400: #c09a89;
+  --color-red-500: #a87a67;
+  --color-red-600: #7a5245;
+  --color-red-700: #5f4036;
+  --color-red-800: #4a322b;
+  --color-red-900: #392721;
 }
 
 @theme inline {
@@ -12,15 +58,28 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
 }
